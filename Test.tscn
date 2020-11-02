@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 0.234089, 0, 0, 0, 1, 0, 0, 0, 0.287652, 0, 0, 0 )
+
+[node name="Spatial" type="Spatial" parent="CSGBox"]
+transform = Transform( 0.696119, 2.18852, -0.61803, -0.141033, 0.797855, -0.00608956, 0.317732, 1.10464, 0.864057, -0.0339233, 1.0094, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGBox/Spatial"]
+transform = Transform( 0.999999, 0, 0, -1.11022e-15, 1, 0, 0, 0, 1, 0.0719428, 0.966209, 0 )

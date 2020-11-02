@@ -1,0 +1,81 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "TreePart",
+"class": "Bamboo",
+"language": "GDScript",
+"path": "res://tree/bamboo/Bamboo.gd"
+}, {
+"base": "Task",
+"class": "FirstThenTask",
+"language": "GDScript",
+"path": "res://util/task/FirstThenTask.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://git_api.gdns"
+}, {
+"base": "Task",
+"class": "GrowDistanceTask",
+"language": "GDScript",
+"path": "res://tree/GrowDistanceTask.gd"
+}, {
+"base": "Task",
+"class": "GrowSizeTask",
+"language": "GDScript",
+"path": "res://tree/GrowSizeTask.gd"
+}, {
+"base": "Task",
+"class": "ParallelTasks",
+"language": "GDScript",
+"path": "res://util/task/ParallelTasks.gd"
+}, {
+"base": "Task",
+"class": "PrioritizedTasks",
+"language": "GDScript",
+"path": "res://util/task/PrioritizedTasks.gd"
+}, {
+"base": "Reference",
+"class": "Task",
+"language": "GDScript",
+"path": "res://util/task/Task.gd"
+}, {
+"base": "Spatial",
+"class": "TreePart",
+"language": "GDScript",
+"path": "res://tree/TreePart.gd"
+} ]
+_global_script_class_icons={
+"Bamboo": "",
+"FirstThenTask": "",
+"GitAPI": "",
+"GrowDistanceTask": "",
+"GrowSizeTask": "",
+"ParallelTasks": "",
+"PrioritizedTasks": "",
+"Task": "",
+"TreePart": ""
+}
+
+[application]
+
+config/name="natureJab"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[gdnative]
+
+singletons=[ "res://git_api.gdnlib" ]
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
