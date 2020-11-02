@@ -10,3 +10,6 @@ script = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00240421, -4.76837e-07, 8.64753 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.665595, 0.459866, -0.587798, 0, 0.787602, 0.616184, 0.746313, -0.410129, 0.524224, -4.69651, 5.3713, 4.75929 )

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tree/skin/SimpleTreePartSkin.gd" type="Script" id=1]
+
+[sub_resource type="VisualShaderNodeColorConstant" id=3]
+constant = Color( 0.15831, 0.660156, 0.0541534, 1 )
+
+[sub_resource type="VisualShader" id=1]
+code = "shader_type spatial;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(0.158310, 0.660156, 0.054153);
+	float n_out2p1 = 1.000000;
+
+// Output:0
+	ALBEDO = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( 0, 150 )
+nodes/fragment/2/node = SubResource( 3 )
+nodes/fragment/2/position = Vector2( 200, 280 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="SimpleTreePartSkin" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Model" type="CSGCombiner" parent="."]
+material_override = SubResource( 2 )
+
+[node name="Branch" type="CSGCylinder" parent="Model"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25, 0 )
+height = 2.5
+sides = 12
+
+[node name="End" type="CSGSphere" parent="Model"]
