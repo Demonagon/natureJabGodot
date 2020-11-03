@@ -15,6 +15,12 @@ func _physics_process(delta):
   var speed = delta * move_speed
   if Input.is_action_pressed("ui_cancel"):
     get_tree().quit()
+  if Input.is_action_pressed("ui_speedup"):
+    move_speed += 1
+  if Input.is_action_pressed("ui_speeddown"):
+    move_speed -= 1
+    if move_speed < 1:
+      move_speed = 1
   if Input.is_action_pressed("ui_forward"):
     .translate(Vector3(0, 0, -speed))
   if Input.is_action_pressed("ui_backward"):
