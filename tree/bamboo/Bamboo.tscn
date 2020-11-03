@@ -1,11 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://tree/bamboo/Bamboo.gd" type="Script" id=1]
-[ext_resource path="res://tree/skin/SimpleTreePartSkin.tscn" type="PackedScene" id=2]
 
 [node name="Bamboo" type="Spatial"]
 script = ExtResource( 1 )
-
-[node name="SimpleTreePartSkin" parent="." instance=ExtResource( 2 )]
-[connection signal="distance_change" from="." to="SimpleTreePartSkin" method="setDistance"]
-[connection signal="size_change" from="." to="SimpleTreePartSkin" method="setSize"]

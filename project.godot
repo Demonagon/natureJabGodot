@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://util/task/FirstThenTask.gd"
 }, {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://git_api.gdns"
@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://util/task/PrioritizedTasks.gd"
 }, {
+"base": "TreePartSkin",
+"class": "SimpleTreePartSkin",
+"language": "GDScript",
+"path": "res://tree/skin/SimpleTreePartSkin.gd"
+}, {
 "base": "Reference",
 "class": "Task",
 "language": "GDScript",
@@ -67,6 +72,7 @@ _global_script_class_icons={
 "GrowSizeTask": "",
 "ParallelTasks": "",
 "PrioritizedTasks": "",
+"SimpleTreePartSkin": "",
 "Task": "",
 "TreePart": "",
 "TreePartSkin": ""
