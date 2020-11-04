@@ -29,4 +29,7 @@ func _ready():
 func createBambooChild():
   var child = load("res://tree/bamboo/Bamboo.tscn").instance()
   child._init(self)
+  
+  child.rotate_z(PI/8)
+  
   return child
