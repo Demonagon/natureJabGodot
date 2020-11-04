@@ -9,7 +9,6 @@ func _init(array = []):
   
 func spend(credits : float):
   
-  var leftovers = 0
   for task in tasks:
     if task is Task  and task.isActive() :
       credits = task.spend(credits)

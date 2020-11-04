@@ -17,7 +17,16 @@ func addSkin(color : Color):
   
 func _ready():
   addSkin(Color(0.2, 0.97, 1, 0.5))
-  .setGrowTask( ParallelTasks.new([
-    GrowSizeTask.new(self, 1),
-    GrowDistanceTask.new(self, 2),
-   ]) )
+  .setGrowTask( PrioritizedTasks.new([
+      ParallelTasks.new([
+        GrowSizeTask.new(self, 1),
+        GrowDistanceTask.new(self, 2),
+      ]),
+      GrowChildTask.new(self, "createBambooChild")
+    ])
+  )
+  
+func createBambooChild():
+  var child = load("res://tree/bamboo/Bamboo.tscn").instance()
+  child._init(self)
+  return child
